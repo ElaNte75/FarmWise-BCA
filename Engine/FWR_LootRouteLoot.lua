@@ -44,6 +44,16 @@ function FWR:EvaluateCraftingReagent(candidate)
 
     local itemName, itemLink, itemRarity, _, _, itemType, itemSubType, _, _, _, _, classID, subclassID, bindType, expansionID, _, isCraftingReagent = GetItemInfo(itemInfo)
 
+    if FWR.IS_BCA then
+        -- this client has no crafting-reagent flag: a farmable material/commodity is one that is
+        -- not bound on pickup, not a quest item, and not equipment (weapons, armor) - gear drops
+        -- are not farming materials
+        isCraftingReagent = (itemName ~= nil)
+            and (bindType ~= 1 and bindType ~= 4)
+            and (classID ~= 2 and classID ~= 4)
+            or nil
+    end
+
     result.itemName = itemName
     result.itemLink = itemLink or result.itemLink
     result.itemRarity = itemRarity
@@ -120,6 +130,16 @@ function FWR:EvaluateTradeEligibility(candidate)
     end
 
     local itemName, itemLink, itemRarity, _, _, itemType, itemSubType, _, _, _, _, classID, subclassID, bindType, expansionID, _, isCraftingReagent = GetItemInfo(itemInfo)
+
+    if FWR.IS_BCA then
+        -- this client has no crafting-reagent flag: a farmable material/commodity is one that is
+        -- not bound on pickup, not a quest item, and not equipment (weapons, armor) - gear drops
+        -- are not farming materials
+        isCraftingReagent = (itemName ~= nil)
+            and (bindType ~= 1 and bindType ~= 4)
+            and (classID ~= 2 and classID ~= 4)
+            or nil
+    end
 
     result.itemName = itemName
     result.itemLink = itemLink or result.itemLink

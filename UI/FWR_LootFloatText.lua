@@ -193,8 +193,20 @@ local function show(entry, quantity)
     host:SetScript("OnUpdate", onUpdate)
 end
 
+-- the floating lines follow the same display rules as the window: what the filters hide
+-- (rarity below the chosen level, old-expansion items when they are off) is not shown either
+local function hiddenByFilters(entry)
+    if FWR.IsEntryBelowRarityFilter and FWR:IsEntryBelowRarityFilter(entry) then
+        return true
+    end
+    if entry.expansionCategory == "old" and not (FWR.IsOldExpansionVisible and FWR:IsOldExpansionVisible()) then
+        return true
+    end
+    return false
+end
+
 FWR:Subscribe("lootRecorded", function(entry, quantity)
-    if type(entry) == "table" and settings().floatLootText == true then
+    if type(entry) == "table" and settings().floatLootText == true and not hiddenByFilters(entry) then
         pcall(show, entry, quantity)
     end
 end)

@@ -3,7 +3,7 @@
 ## Notes: Farm smarter, zone by zone - for Burning Crusade Anniversary
 ## Version: 1.0.0
 ## Author: Gchris
-## IconTexture: Interface\Icons\INV_Misc_Coin_01
+## IconTexture: Interface\AddOns\FarmWiseBCA\Textures\FarmWiseBCA
 ## SavedVariables: FarmWiseDB, FarmWiseReforgedDB, FarmWiseReforgedSettingsDB
 
 Core/FWR_Defaults.lua
