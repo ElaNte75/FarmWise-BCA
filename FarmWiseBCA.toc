@@ -1,0 +1,58 @@
+## Interface: 20506
+## Title: FarmWise BCA
+## Notes: Farm smarter, zone by zone - for Burning Crusade Anniversary
+## Version: 1.0.0
+## Author: Gchris
+## IconTexture: Interface\Icons\INV_Misc_Coin_01
+## SavedVariables: FarmWiseDB, FarmWiseReforgedDB, FarmWiseReforgedSettingsDB
+
+Core/FWR_Defaults.lua
+Core/FWR_Events.lua
+Core/FWR_AreaScope.lua
+Core/FWR_Storage.lua
+Core/FWR_TooltipScan.lua
+Data/FWR_StarterGuideData.lua
+Core/FWR_AdvisorStore.lua
+Core/FWR_AuctionScan.lua
+Core/FWR_SellFilters.lua
+Core/FWR_PriceHistory.lua
+Core/FWR_SalesHistory.lua
+Core/FWR_ActionsLedger.lua
+Core/FWR_RarityFilter.lua
+Core/FWR_SessionReset.lua
+Core/FWR_AutoReset.lua
+Core/FWR_CharacterScope.lua
+Core/FWR_ViewScope.lua
+Core/FWR_IdleSystem.lua
+Core/FWR_IdleCombatTrigger.lua
+Core/FWR_GoldLedger.lua
+Core/FWR_TooltipSystem.lua
+Engine/FWR_SourceFilter.lua
+Engine/FWR_AcquisitionContext.lua
+Engine/FWR_LootRouteLoot.lua
+Engine/FWR_LootRouteHerbalism.lua
+Engine/FWR_LootRouteMining.lua
+Engine/FWR_LootRouteFishing.lua
+Engine/FWR_LootRouteSkinning.lua
+Engine/FWR_LootRouteCombat.lua
+Engine/FWR_LootHandler.lua
+Engine/FWR_VendorLoot.lua
+Rendering/FWR_RenderConfigurator.lua
+Rendering/FWR_RenderState.lua
+Rendering/FWR_Rendering.lua
+UI/FWR_PanelStyle.lua
+UI/FWR_MainFrameConfigurator.lua
+UI/FWR_MainFrame.lua
+UI/FWR_ControlPanelConfigurator.lua
+UI/FWR_MainWindowControls.lua
+UI/FWR_LootFloatText.lua
+UI/FWR_CombatVisibility.lua
+UI/FWR_ControlPanelWindow.lua
+UI/FWR_ManualContent.lua
+UI/FWR_ManualPage.lua
+UI/FWR_LauncherIcon.lua
+UI/FWR_AdvisorPanel.lua
+UI/FWR_PriceTooltip.lua
+UI/FWR_BagVendorCoin.lua
+UI/FWR_AuctionTabBCA.lua
+FarmWiseReforged.lua
